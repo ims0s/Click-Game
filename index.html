@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Button Game</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <button class="log" id="playerOneLog">login</button>
     <div id="playground">
-        <div id="playerOne">
-            <div class="scoreboard"></div>
+        <div id="playerOne" class="players">
+            <div class="scoreboard"><div class="score" id="playerOneScore">0</div></div>
             <div class="buttonSection">
-                <button>
-                    
+                <button id="one">
+                    CLICK HERE!
                 </button>
             </div>
         </div>
-        <div id="playerTwo">
-            <div class="scoreboard"></div>
+        <div id="playerTwo" class="players">
+            <div class="scoreboard"><div class="score" id="playerTwoScore">0</div></div>
             <div class="buttonSection">
-                <button>
-
+                <button id="two">
+                    CLICK HERE!
                 </button>
             </div>
         </div>
     </div>
+    <button class="log" id="playerTwoLog">login</button>
+    <script src="./script.js"></script>
 </body>
 </html>

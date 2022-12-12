@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    /* flex-direction: column; */
+    /* width: 100%;
+    min-height: 100%; */
+    justify-content: space-around;
+    align-items: center;
+}
+#playground{
+    width: 900px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    border-radius: 2%;
+    
+}
+.players{
+    /* display: flex;
+    flex-direction: column; */
+    flex-grow: 1;
+    align-items: center;
+}
+.scoreboard{
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score{
+    width: 20px;
+    background-color: white;
+    height: 50%;
+    font-weight: 800;
+    font-size: large;
+    text-align: center;
+    padding-top: 5px;
+}
+.buttonSection{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+button{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+}
+#playerOne{
+    background-color: green;
+}
+#playerTwo{
+    background-color: purple;
+}
+.class{
+    
+}
