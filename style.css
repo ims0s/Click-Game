@@ -81,3 +81,8 @@ background-color: aquamarine;
 .playless{
 background-color: red;
 }
+#reset{
+    margin-top: 15px;
+    color: yellow;
+    background-color: black;
+}

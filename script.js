@@ -1,7 +1,10 @@
 let elemnt = document.getElementById("one")
 let countdown , logTimeout
 const timeout = document.getElementById("timeout");
-
+const reset = document.getElementById('reset')
+let player1,player2
+player1= document.getElementById('playerOneScore')
+player2= document.getElementById('playerTwoScore')
 elemnt.addEventListener("click",function () {
     timeout.innerHTML=10;
     clearInterval(countdown)
@@ -61,6 +64,9 @@ log1.addEventListener("click",  () => {
             document.getElementById('playerOneScore').innerHTML="Win"
             clearInterval(countdown)
             this.timeout.innerHTML="GameOver"
+            elemnt.classList.add('hidden')
+            elemnt2.classList.add('hidden')
+            reset.classList.remove('hidden')
         },5000)
     }else{
         log1.innerHTML = "login"
@@ -86,6 +92,9 @@ log2.addEventListener("click",  () => {
             document.getElementById('playerOneScore').innerHTML="Lose"
             clearInterval(countdown)
             this.timeout.innerHTML="GameOver"
+            elemnt.classList.add('hidden')
+            elemnt2.classList.add('hidden')
+            reset.classList.remove('hidden')
         },5000)
         
     }else{
@@ -97,18 +106,30 @@ log2.addEventListener("click",  () => {
 })
 
 function checkWinner(){
-    let player1,player2
-    player1= document.getElementById('playerOneScore')
-    player2= document.getElementById('playerTwoScore')
-    if(player1.innerHTML==5){
+    if(player1.innerHTML==2){
         player1.innerHTML="Win"
         player2.innerHTML="Lose"
         elemnt.classList.add('hidden')
         elemnt2.classList.add('hidden')
-    }else if(player2.innerHTML==5){
+        reset.classList.remove('hidden')
+        this.timeout.innerHTML="GameOver"
+    }else if(player2.innerHTML==2){
         player1.innerHTML="Lose"
         player2.innerHTML="Win"
         elemnt.classList.add('hidden')
         elemnt2.classList.add('hidden')
+        reset.classList.remove('hidden')
+        this.timeout.innerHTML="GameOver"
     }
 }
+
+reset.addEventListener('click',() => {
+    player1.innerHTML=0;
+    player2.innerHTML=0;
+    elemnt.classList.remove('hidden')
+    elemnt2.classList.remove('hidden')
+    reset.classList.add("hidden")
+    this.timeout.innerHTML=10
+    log1.innerHTML='login';
+    log2.innerHTML='login'
+})
