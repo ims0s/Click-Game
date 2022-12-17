@@ -30,7 +30,7 @@ body{
     align-items: center;
 }
 .score{
-    width: 20px;
+    padding: 0 5px;
     background-color: white;
     height: 50%;
     font-weight: 800;
@@ -67,8 +67,17 @@ button{
     color: white;
     margin-bottom: 50px;
     display: block;
-    width: 60px;
+    
     padding: 10px;
     text-align: center;
     font-size: 40px;
+}
+.hidden{
+    visibility: hidden;
+}
+.playable{
+background-color: aquamarine;
+}
+.playless{
+background-color: red;
 }
